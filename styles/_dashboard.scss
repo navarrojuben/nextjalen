@@ -1,0 +1,74 @@
+.dashboardContent {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap; // allows wrapping on smaller screens
+  }
+  
+  .dashboardMainDiv {
+    flex: 1;
+    min-width: 0;
+    width: calc(100% - 300px);
+  }
+  
+  .dashboardRightSideBar {
+    width: 300px;
+    flex-shrink: 0;
+    background: $steam-gradient-2;
+    padding: 1rem;
+    border-left: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+    height: auto; // follows content height
+  }
+  
+  // Event section styles
+  .eventSection {
+    margin-bottom: 2rem;
+  }
+  
+  .eventCard {
+    background: $steam-gradient-2;
+    padding: 10px 14px;
+    margin: 10px 0 0 0;
+    border-left: 4px solid #007bff;
+    border-radius: 4px;
+  }
+  
+  .eventSectionTitle {
+    margin: 0 0 30px 0;
+  }
+  
+  .dateToday {
+    color: $red;
+  }
+  
+  // Skeleton loader layout
+  .skeletonDiv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  // Responsive: sidebar moves on top below 900px
+  @media (max-width: 900px) {
+    .dashboardContent {
+      flex-direction: column-reverse; // sidebar on top
+    }
+  
+    .dashboardRightSideBar {
+      width: 100%;
+      border-left: none;
+      border-top: 1px solid #ddd;
+      margin-bottom: 2rem;
+    }
+  
+    .skeletonDiv {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  

@@ -1,0 +1,369 @@
+.connected-to{
+  font-size:10px;
+}
+
+.codes-page-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+  }
+
+   /* Code Block Styles */
+  .codes-code-snippet-code-block {
+    padding: 15px; /* Add padding around the code */
+    margin: 0; /* Remove default margin */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+
+    background: $black-1;
+  }
+
+  .codes-emptySnippets-text{
+    margin: 20px 0 0 0;
+    text-align: center;
+    color: $grey;
+    font-weight: 700;
+
+    user-select: none;
+  }
+
+  .codes-navbar-div{
+    width: 100%;
+    height: 30px;
+
+
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    background: white;
+  }
+
+
+  .codes-add-code-btn, 
+  .codes-search-btn  {
+    width: 40px;
+    height: 30px;
+    color: black;
+    
+    @include center-all;
+    cursor: pointer;
+
+    font-size: 20px;
+
+    &:hover{color: $blue;}
+  }
+
+  .codes-search-input{
+    width: 100%;
+    max-width: 300px;
+    margin: 0 20px 0 0;
+    height: 30px;
+
+    border: none;
+
+    &:focus{
+    outline: none;
+    }
+  }
+  
+
+
+  
+  
+
+  
+
+  
+  
+  
+  
+  /* Modal Styles */
+  // .codes-modal {
+  //   position: fixed;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   z-index: 1000;
+  //   width: 100%;
+  //   max-width: 500px;
+  //   max-height: calc(100vh - 100px);
+  //   background-color: white;
+  //   border-radius: 10px;
+  //   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  //   padding: 20px;
+  //   overflow-y: auto;
+  // }
+
+  .codes-modal {
+    position: fixed;
+    top:  100px;
+    left: 0;
+
+    z-index: 1000;
+    width: 100%;
+    
+    height: calc(100vh - 100px);
+    background-color: rgba(grey,0.7);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+
+
+    margin: 0 auto;
+  }
+  
+  .codes-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin:  20px auto;
+  }
+  
+  .codes-close-modal {
+  position: absolute;
+   
+  top:   20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+/* Form Styles */
+.codes-add-code-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.codes-add-code-form input,
+.codes-add-code-form textarea,
+.codes-add-code-form select {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.codes-add-code-form button {
+  width: 150px;
+  margin: 0 auto;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  user-select: none;
+
+  &:hover{
+    background-color: #0056b3;
+}
+}
+
+
+
+
+.codes-code-snippet-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+/* Delete Modal Styles */
+.delete-code-modal{
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+
+}
+
+.delete-title{
+  color: black;
+  margin: 10px 0;
+}
+.delete-code-btn-div{
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+.codes-confirm-delete-button {
+
+  width: 100px;
+  background-color: $grey;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover{
+    background: $red;
+  }
+}
+.codes-cancel-delete-button {
+  width: 100px;
+  background-color: $grey;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.codes-cancel-delete-button:hover {
+  background: $grey;
+}
+
+////// v2
+.codes-code-snippet-container{
+    width: 100%;
+    margin-top: 20px;
+    border-top: none;
+
+    border-radius: 0 0 10px 5px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: white;
+}
+
+
+
+.codes-snippet-header{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+
+    background: $steam-gradient-1;
+}
+
+.codes-code-title{
+  margin: 0 0 5px 0;
+  padding: 0 0 0 10px;
+
+  color: $white;
+  font-size: 21px;
+}
+
+.codes-snippet-language-label{
+  width: 100px;
+  height: 30px;
+  margin: 0 0 0 5px;
+  
+  display: flex;
+  align-items: center;
+  font-weight:700;
+
+  user-select: none;
+
+  font-size: 12px;
+
+  color: red;
+
+  padding: 0 0 0 10px;
+}
+
+.codes-code-desc{
+  white-space: pre-wrap;
+  padding: 10px 0 0 10px;
+  color: $black-2;
+}
+
+
+
+
+
+
+
+
+
+
+
+.codes-code-snippet-footer{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    display: flex;
+
+    border-top: 1px solid rgba(grey, 0.3);
+
+    background: $black-1;
+}
+
+.codes-code-snippet-copy-button {
+  &:hover{color: $red-1;}
+}
+.codes-toggle-visibility-button {
+  &:hover{color: $red-1;}
+
+}
+.codes-edit-snippet-button{
+  margin-left: auto;
+  &:hover{
+    color: $red-1;
+  }
+}
+
+
+
+.loading-spinner{
+    margin: 60px 0 0 0;
+    width: 100%;
+    @include center-all;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.codes-see-more {
+  margin: 0 0 0 5px;
+  color: rgba(grey, 0.5); /* Facebook-like link color */
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: 700;
+}
+
+.codes-see-more:hover {
+  color: $blue; /* Darker shade on hover */
+}
+
+
+
+.codes-delete-snippet-button{
+  &:hover{
+    color: $red-1;
+  }
+}
+
+.codes-delete-snippet-button,
+.codes-edit-snippet-button,
+.codes-code-snippet-copy-button,
+.codes-toggle-visibility-button
+{
+    width: 30px;
+    height: 30px;
+    @include center-all;
+    color: $blue-1;
+  
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+.dateRow{
+  border-top: 1px solid $white;
+}
+
+.dateTitle{
+ 
+  color: $blue-1;
+
+  margin: 0 20px 0 0;
+}
+
+.dateDate{
+ color: $red-1;
+}
+
+.dateClassification{
+  width: 60px;
+     font-size: 12px;
+     color: $grey-1;
+}
+
+.dateDescription{
+  margin: 0 0 0 15px;
+
+ 
+}
+
+.dateRecurring{
+  margin: 0 10px;
+}
+
+
+

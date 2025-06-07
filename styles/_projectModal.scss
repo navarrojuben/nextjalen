@@ -1,0 +1,99 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Avoid using 100vw to prevent scroll */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem; /* Prevent content from touching edges */
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    
+    position:relative;
+    width: 90%;
+    max-width: 800px;
+
+    max-height: calc(90vh - 50px);
+    overflow-y: auto;
+    margin: auto;
+
+    padding: 15px;
+
+    background: $steam-gradient-1;
+
+  }
+  
+  .modal-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+  }
+
+  .projectModalHeader{
+    position: sticky;
+    top: 0;
+    height: 30px;
+    width: 30px;
+    margin: 0 0 0 auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+    background: rgba($black-3, 1);
+    
+    border-radius: 50%;
+
+  }
+
+  .projectModalTitle{
+    width: calc(100% - 30px);
+    color: $blue-1;
+  }
+
+  
+  .close-button {
+   
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+ 
+
+    z-index: 5000;
+    font-size: 25px;
+    color: $grey-1;
+
+  }
+
+  .projectModalDescription{
+    color:white;
+    white-space: pre-wrap;
+  }
+  .projectCardTechStack{
+    color: white;
+  }
+  
+  
+  @media screen and (max-width: 600px) {
+    .modal-content {
+      max-height: 80vh;
+      padding: 1rem;
+    }
+  }
+  

@@ -1,0 +1,146 @@
+// ------------------------------Project Grid
+
+
+
+/* Individual project card */
+.projectCard {
+
+  flex: 1 1 300px;     
+  max-width: 400px;    
+  width: 100%;         
+  margin: 0;         
+
+
+  background-color: #292E37;
+  color: #ADADAD;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  }
+  
+  .projectCardImage{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+
+    margin: 0 0 10px 0;
+  }
+  
+ .projectCardTitle{
+
+  color: $blue-1;
+  margin: 0 0 20px 0; 
+
+  cursor: pointer;
+  white-space: pre-wrap;
+
+  &:hover{
+    color: $red-1;
+  }
+ }
+
+  
+  .project-card p {
+    flex-grow: 1;
+    margin-bottom: 0.75rem;
+  }
+  
+  .tech-stack {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer section: links and actions */
+  .project-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+.projectCardImage{
+    cursor: pointer;
+}
+.projectCard-viewMoreButton{
+    background: none;
+    color: $blue-1;
+    cursor: pointer;
+    margin:  0;
+    padding: 0;
+ 
+
+    display: inline-block;
+    &:hover{
+      color: $red-1;
+    }
+}
+
+
+.projectCard-linksDiv{
+    display: flex;
+    margin: 10px 0 0 0;
+}
+
+
+.projectCard-gitHubLink{
+    color: $blue-1;
+    text-decoration: none;
+
+    width: fit-content;
+    padding: 2px 5px;
+    margin: 0 10px 0 0;
+}
+
+.projectCard-liveLink{
+    color: $blue-1;
+    text-decoration: none;
+
+    width: fit-content;
+    padding: 2px 5px;
+
+}
+
+
+
+
+
+.projectCard-techStackDiv
+{
+    user-select: none;
+    margin-top: 10px;
+}
+  
+  .projectCard-techStackCapsules
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+
+    user-select: none;
+}
+  
+  .tech-capsule
+{
+    background-color: #f0f0f0;
+    color: $black-3;
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    border: 1px solid #ccc;
+}
+
+
+  
+.projectCardLink{
+    &:hover{
+        text-decoration: none;
+        color: $red-1;
+    }
+}

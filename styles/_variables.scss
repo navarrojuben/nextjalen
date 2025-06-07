@@ -1,0 +1,87 @@
+
+
+$black-1: #171A21;
+$black-2: #232730;
+$black-3: #292E37;
+
+$grey-1:  #ADADAD;
+
+$red-1:  #ff6f61;
+$blue-1: #66C0F4;
+$blue-2: #2196f3;
+
+
+$steam-gradient-1: linear-gradient(135deg, #1b2838 0%, #171a21 100%);
+$steam-gradient-2: linear-gradient(135deg, #171a21 0%, #4a4e58 100%);
+
+@mixin center-all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//components
+
+// Variables
+$grey: #4c4c4c;
+$white: #f5f2f0;
+$font-family-mono: monospace;
+
+$red:  #FF6969;
+$blue:  #96BAD7;
+
+@mixin mono{
+    font-family: 'Nova Mono', monospace; 
+}
+
+@mixin sans{
+    font-family: 'Work Sans', sans-serif;
+}
+
+@mixin center-all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin hoverBG{
+    &:hover{
+        background: $steam-gradient-2;
+        color:      $red-1;
+    }
+}
+
+@mixin scroll{
+    &::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px white;
+    }
+
+    &::-webkit-scrollbar
+    {
+        width: 7px;
+        background-color:white;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+        border-radius: 20px;
+        -webkit-box-shadow: inset 0 0 6px white;
+        background-color: rgba(black, .3);
+    }
+
+
+    @media screen and (max-width: 400px){
+        &::-webkit-scrollbar
+        {
+        width: 1px;
+        background-color:white;
+        }
+     }
+}
+
+@mixin grad-bg{
+    background: rgb(218,206,206);
+    background: linear-gradient(90deg, rgba(218,206,206,1) 15%, rgba(215,207,207,1) 30%, rgba(196,214,218,1) 100%);
+}
+
