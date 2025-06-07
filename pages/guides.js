@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'; // Required for Quill styling
 
-
-const guides = () => {
+const Guides = () => {
   const [content, setContent] = useState('');
 
   const handleChange = (value) => {
@@ -20,27 +19,22 @@ const guides = () => {
         theme="snow"
         placeholder="Write your guide here..."
         modules={{
-            toolbar: [
-                [{ header: [1, 2, 3, false] }],
-                ['bold', 'italic', 'underline'],
-                [{ list: 'ordered' }, { list: 'bullet' }],
-                ['link'],
-                ['code-block'],         // for block-level code
-                ['clean'],
-              ],
+          toolbar: [
+            [{ header: [1, 2, 3, false] }],
+            ['bold', 'italic', 'underline'],
+            [{ list: 'ordered' }, { list: 'bullet' }],
+            ['link'],
+            ['code-block'],
+            ['clean'],
+          ],
         }}
         formats={[
           'header', 'bold', 'italic', 'underline', 'strike',
-          'list', 'bullet', 'link', 'image',
+          'list', 'bullet', 'link', 'code-block',
         ]}
-      />
-      <h3 className="preview-title">Preview</h3>
-      <div
-        className="editor-preview"
-        dangerouslySetInnerHTML={{ __html: content }}
       />
     </div>
   );
 };
 
-export default guides;
+export default Guides;
