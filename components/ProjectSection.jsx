@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion'; // 👈 Framer Motion import
 
-import ProjectCard from './ProjectCard';
-import ProjectModal from './ProjectModal';
-import SkeletonLoader from './SkeletonLoader';
+import ProjectCard from './projectCard';
+import ProjectModal from './projectModal';
+import SkeletonLoader from './skeletonLoader';
 
     const API_BASE_URL =
     process.env.NODE_ENV === 'production'
