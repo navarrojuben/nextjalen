@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Home, Work, Info, Email } from '@mui/icons-material';
 
 import LandingPage    from '../components/LandingPage';
-import ProjectSection from '../components/ProjectSection';
+import ProjectSection from '../components/projectSection';
 import About          from '../components/About';
 import Contact        from '../components/Contact';
 
