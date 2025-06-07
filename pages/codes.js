@@ -1,19 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
-import Prism from 'prismjs';
-import 'prismjs/themes/prism-tomorrow.css';
-import 'prismjs/components/prism-javascript';
-import 'prismjs/components/prism-css';
-import 'prismjs/components/prism-scss';
-import 'prismjs/components/prism-markup';
+import dynamic from 'next/dynamic';
 import { ClipLoader } from 'react-spinners';
 import { FaPlus, FaEdit, FaTrash, FaCopy, FaEye, FaEyeSlash } from 'react-icons/fa';
 
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import js from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-
-SyntaxHighlighter.registerLanguage('javascript', js);
+const CodePreview = dynamic(() => import('../components/CodePreview'), { ssr: false });
 
 const codes = () => {
   const [codeSnippets, setCodeSnippets] = useState([]);
@@ -58,17 +49,6 @@ const codes = () => {
   useEffect(() => {
     fetchCodeSnippets();
   }, [fetchCodeSnippets]);
-
-  useEffect(() => {
-    codeSnippets.forEach(snippet => {
-      if (visibleSnippets[snippet._id]) {
-        const codeElement = document.querySelector(`#code-block-${snippet._id} code`);
-        if (codeElement) {
-          Prism.highlightElement(codeElement);
-        }
-      }
-    });
-  }, [visibleSnippets, codeSnippets, codeSearch]);
 
   const handleAddOrEditCode = async (e) => {
     e.preventDefault();
@@ -202,12 +182,12 @@ const codes = () => {
         />
 
         {totalPages > 1 && (
-            <div className="pagination">
-              <button onClick={handlePrevPage} disabled={currentPage === 1} className="paginationButton">Prev</button>
-              <span className="paginationInfo">Page {currentPage} of {totalPages}</span>
-              <button onClick={handleNextPage} disabled={currentPage === totalPages} className="paginationButton">Next</button>
-            </div>
-          )}
+          <div className="pagination">
+            <button onClick={handlePrevPage} disabled={currentPage === 1} className="paginationButton">Prev</button>
+            <span className="paginationInfo">Page {currentPage} of {totalPages}</span>
+            <button onClick={handleNextPage} disabled={currentPage === totalPages} className="paginationButton">Next</button>
+          </div>
+        )}
       </div>
 
       {isModalOpen && (
@@ -240,15 +220,6 @@ const codes = () => {
                   required
                 />
               </div>
-
-              {code && (
-                <div className="modalInputDiv">
-                  <label className="modalInputLabel">Preview</label>
-                  <SyntaxHighlighter language={language || 'javascript'} style={atomOneDark}>
-                    {code}
-                  </SyntaxHighlighter>
-                </div>
-              )}
 
               <div className="modalInputDiv">
                 <label className="modalInputLabel">Tags</label>
@@ -315,17 +286,9 @@ const codes = () => {
                 </div>
               </div>
 
-              {visibleSnippets[snippet._id] && (
-                <pre id={`code-block-${snippet._id}`} className="codes-code-snippet-code-block">
-                  <SyntaxHighlighter language="javascript" style={atomOneDark}>
-                    {snippet.code}
-                  </SyntaxHighlighter>
-                </pre>
-              )}
+              {visibleSnippets[snippet._id] && <CodePreview snippet={snippet} />}
             </div>
           ))}
-
-          
         </>
       )}
 
