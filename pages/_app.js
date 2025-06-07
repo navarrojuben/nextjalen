@@ -85,7 +85,7 @@ function ProtectedRoute({ children }) {
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const protectedRoutes = [
-    '/dashboard', '/projects', '/links', '/codes', '/guides', '/inbox', '/notes', '/dates'
+    '/dashboard', '/projects', '/links', '/codes',  '/inbox', '/notes', '/dates'
   ];
 
   const isProtected = protectedRoutes.includes(router.pathname);
