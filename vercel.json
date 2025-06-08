@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/sitemap.xml", "destination": "/sitemap" }
+    { "source": "/sitemap.xml", "destination": "/api/sitemap.xml" }
   ]
 }
