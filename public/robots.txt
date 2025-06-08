@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nextjalen.vercel.app/sitemap.xml
+Sitemap: https://nextjalen.vercel.app/api/sitemap
