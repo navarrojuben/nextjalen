@@ -54,7 +54,7 @@ const Navbar = () => {
 
   useEffect(() => {
     if (iconClickCount === 7) {
-      router.push('/Login');
+      router.push('/login');
       clearTimeout(clickTimeout);
       setIconClickCount(0);
     }
