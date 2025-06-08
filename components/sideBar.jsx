@@ -60,10 +60,7 @@ const SideBar = () => {
         <SidebarLink href="/codes" icon={<CodeIcon />} label="Codes" />
       </SidebarCategory>
 
-      {/* Dropdown: Guides */}
-      {/* <SidebarCategory title="Guides" isOpen={isOpen('guides')} toggle={() => toggleCategory('guides')}>
-        <SidebarLink href="/guides" icon={<EmojiObjectsIcon />} label="Guides" />
-      </SidebarCategory> */}
+    
 
       {/* Dropdown: Notes */}
       <SidebarCategory title="Jalen" isOpen={isOpen('notes')} toggle={() => toggleCategory('notes')}>
